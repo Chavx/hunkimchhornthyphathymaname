@@ -21,7 +21,7 @@
     <meta name="twitter:image" content="https://pisethandmonypenita.netlify.app/PisethandMonypenita.jpg">
 
     <!-- កូដ JavaScript សម្រាប់ទាញយកឈ្មោះភ្ញៀវមកដូរ Meta ស្វ័យប្រវត្តិ -->
-    <script>
+   <script>
     (async function() {
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get('i');
@@ -33,7 +33,7 @@
         // ទាញយកឈ្មោះតាម ID ពី Worker KV API
         if (id) {
             try {
-                const response = supportFetch = await fetch(`/api/invitations/${encodeURIComponent(id)}`);
+                const response = await fetch(`/api/invitations/${encodeURIComponent(id)}`);
                 if (response.ok) {
                     const data = await response.json();
                     guestName = data.name ? data.name.trim() : "";
@@ -60,10 +60,10 @@
 
             let twDesc = document.querySelector('meta[name="twitter:description"]');
             if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+        }
 
-            if (guestEl) {
-                guestEl.textContent = `ជូនចំពោះ ${guestName}`;
-            }
+        if (guestEl) {
+            guestEl.textContent = guestName ? `ជូនចំពោះ ${guestName}` : `ជូនចំពោះ លីមី បោះពុម្ព`;
         }
     })();
 </script>
