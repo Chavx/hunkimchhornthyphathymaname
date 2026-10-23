@@ -11,7 +11,7 @@
     <meta property="og:title" content="អាពាហ៍ពិពាហ៍ 💍">
     <meta property="og:description" content="សូមគោរពអញ្ជើញលោកអ្នកចូលរួមក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️">
     <meta property="og:image" content="https://pisethandmonypenita.netlify.app/PisethandMonypenita.jpg">
-    <meta property="og:url" content="https://pisethandmonypenita.netlify.app/">
+    <meta property="og:url" content="https://hunkimchhornthyphathy2026.pages.dev/">
     <meta property="og:type" content="website">
 
     <!-- Twitter / Telegram -->
@@ -125,20 +125,27 @@
 
         /* Background Video / Image Styling */
         .bg-media {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    object-fit: cover !important;
-    z-index: -2 !important;
-    display: block !important;
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -2;
+        }
 
         /* Dark Overlay & Blur */
-        body {
-    background: transparent !important;
-    isolation: isolate !important;
-}
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0d1702a6;
+            backdrop-filter: blur(2px);
+            z-index: -1;
+        }
 
         /* Main Responsive Container Frame */
         .invitation-card {
@@ -146,7 +153,7 @@
             max-width: 430px;
             height: 92vh;
             max-height: 860px;
-            background: linear-gradient(#2b265c, rgba(15, 23, 42, 0.6)), url('/backgrund/3.jpg');
+            background: linear-gradient(#2b265c, rgba(15, 23, 42, 0.6)), url('backgrund/IMG_1005.jpg');
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--border-color);
@@ -1487,7 +1494,7 @@
     <div id="petal-container"></div>
 
     <!-- Background Media -->
-    <img src="/backgrund/IMG_0987.jpg" class="bg-media" alt="Background">
+    <img src="backgrund/IMG_1005.jpg" class="bg-media" alt="Background">
 
     <!-- Invitation Card Container -->
     <div class="invitation-card">
@@ -1531,9 +1538,9 @@
                 <div class="envelope-instruction">ចុចលើត្រាដើម្បីបើកលិខិតអញ្ជើញ</div>
 
                 <div class="wedding-date-front" data-i18n="p1_date" style="margin-top: 1rem;">
-                    ថ្ងៃសៅរ៍ ទី១៤ ខែវិច្ឆិកា ឆ្នាំ២០២៦ វេលាម៉ោង ៥:៣០ ល្ងាច
-                    <div>ស្ថិតនៅ ផ្លូវវេទិកាមេគង្គ (ផ្លូវមាត់ទន្លេច្រោយចង្វារ) <div>
-<div>រាជធានីភ្នំពេញ</div></div></div>
+                    ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦ វេលាម៉ោង ៥:០០ ល្ងាច
+                    <div>ស្ថិតនៅ  មជ្ឈមណ្ឌលសុភមង្គល (អគារA+B) ក្រុងបាត់ដំបង  <div>
+<div>ខេត្តបាត់ដំបង</div></div></div>
                 </div>
             </div>
         </div>
@@ -1548,12 +1555,12 @@
                 <div class="formal-title" data-i18n="p2_title">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
                 <div class="parents-block">
                     <div class="parents-side">
-                        <p class="parent-name" data-i18n="p2_g_father">លោក ហួយ សុខ ឃាង</p>
-                        <p class="parent-name" data-i18n="p2_g_mother">លោកស្រី ហួយ គឹមស្រ៊ុន</p>
+                        <p class="parent-name" data-i18n="p2_g_father">លោក ឌិន ប៊ុណ្ណា</p>
+                        <p class="parent-name" data-i18n="p2_g_mother">លោកស្រី លាង គឹម</p>
                     </div>
                     <div class="parents-side">
-                        <p class="parent-name" data-i18n="p2_b_father">លោក ធី ដេវីត</p>
-                        <p class="parent-name" data-i18n="p2_b_mother">លោកស្រី ឡាំ លីនណា</p>
+                        <p class="parent-name" data-i18n="p2_b_father">លោក សៀង យុឹងខាត់</p>
+                        <p class="parent-name" data-i18n="p2_b_mother">លោកស្រី សុខ ឡាង</p>
                     </div>
                 </div>
                
@@ -1563,19 +1570,18 @@
                 <div class="couple-names-block-formal">
                     <div class="couple-side-formal">
                         <span class="couple-name-label">កូនប្រុសនាម</span>
-                        <p class="main-couple-name-formal" data-i18n="groom_name">ហ៊ុន គឹមឈាន់</p>
+                        <p class="main-couple-name-formal" data-i18n="groom_name">ជា អានន្ទ</p>
                     </div>
                     <div class="couple-side-formal">
                         <span class="couple-name-label">កូនស្រីនាម</span>
-                        <p class="main-couple-name-formal" data-i18n="bride_name">ធី ប៉ាត់ទីម៉ា</p>
+                        <p class="main-couple-name-formal" data-i18n="bride_name">សៀង សាយលីញ</p>
                     </div>
                 </div>
                 
                 <div class="date-location-block-formal">
                     <p><span data-i18n="p2_loc_prefix">ដែលនឹងប្រព្រឹត្តទៅនៅ</span><br>
-                    <span class="highlight-date-formal" data-i18n="p2_date">ថ្ងៃសៅរ៍ ៥កើត ខែកត្តិក ឆ្នាំមមី អដ្ឋស័ក ព.ស. ២៥៧០ <div></div>ត្រូវនឹងថ្ងៃទី១៤ ខែវិច្ឆិកា ឆ្នាំ២០២៦ វេលាម៉ោង ៥:៣០ ល្ងាច</span><br>
-                    <span data-i18n="p2_loc_text">ស្ថិតនៅ </span> <a href="https://maps.app.goo.gl/8hAWmHVpt1sXTFc67" target="_blank" style="color: var(--primary-gold); text-decoration: underline;" data-i18n="p2_venue">ស្ថិតនៅ ផ្លូវវេទិកាមេគង្គ (ផ្លូវមាត់ទន្លេច្រោយចង្វារ)
-រាជធានីភ្នំពេញ </a></p>
+                    <span class="highlight-date-formal" data-i18n="p2_date">ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦ <div></div>ត្រូវនឹងថ្ងៃ ៦រោច ខែកត្តិក ឆ្នាំថោះ អដ្ឋស័ក ព.ស. ២៥៧០ វេលាម៉ោង ៥:០០ ល្ងាច</span><br>
+                    <span data-i18n="p2_loc_text">ស្ថិតនៅ </span> <a href="https://maps.app.goo.gl/GoYLBuUJhoxCxAig7" target="_blank" style="color: var(--primary-gold); text-decoration: underline;" data-i18n="p2_venue">ស្ថិតនៅ មជ្ឈមណ្ឌលសុភមង្គល (អគារA+B) ក្រុងបាត់ដំបង ខេត្តបាត់ដំបង </a></p>
                 </div>
 
                 <div class="scroll-hint">
@@ -1586,50 +1592,74 @@
                 <div class="agenda-divider" data-i18n="p2_agenda_title">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
 
                 <!-- DAY 1 -->
-                <div class="program-day-title" data-i18n="p2_day1_title">កម្មវិធីថ្ងៃទី១៖ ថ្ងៃសៅរ៍ ទី១៤ ខែវិច្ឆិកា ឆ្នាំ២០២៦</div>
+                <div class="program-day-title" data-i18n="p2_day1_title">កម្មវិធីថ្ងៃទី១ ៖ ថ្ងៃអាទិត្យ ទី២៩ ខែវិច្ឆិកា ឆ្នាំ២០២៦</div>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="time-badge" data-i18n="p2_d2_t7">ម៉ោង ០៦:៣០ ព្រឹក</div>
-                        <div class="event-name" data-i18n="p2_d2_e7">ជួបជុំភ្ញៀវកិត្តិយសដើម្បីរៀបចំពិធីហែជំនួន</div>
+                        <div class="time-badge" data-i18n="p2_d2_t7">ម៉ោង ០៣:០០ នាទីរសៀល</div>
+                        <div class="event-name" data-i18n="p2_d2_e7">ពិធីសែនក្រុងពាលី</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="time-badge" data-i18n="p2_d1_t1">ម៉ោង ០៧:១៥ ព្រឹក</div>
-                        <div class="event-name" data-i18n="p2_d1_e1">ពិធីហែកំណត់ (ហែជំនួន) ចូលរោងជ័យ</div>
+                        <div class="time-badge" data-i18n="p2_d1_t1">ម៉ោង ០៤:០០ នាទីរសៀល</div>
+                        <div class="event-name" data-i18n="p2_d1_e1">ពិធីសូត្រមន្តចម្រើនព្រះបរិត្ត</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="time-badge" data-i18n="p2_d1_t1">ម៉ោង ០៧:៣០ ព្រឹក</div>
-                        <div class="event-name" data-i18n="p2_d1_e1">ពិធីច្រៀងរៀបរាប់ផ្លែឈើ</div>
+                        <div class="time-badge" data-i18n="p2_d1_t1">ម៉ោង ០៥:០០ នាទីល្ងាច</div>
+                        <div class="event-name" data-i18n="p2_d1_e1">ពិធីជាវខាន់ស្លា</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="time-badge" data-i18n="p2_d1_t1">ម៉ោង ០៨:១៥ ព្រឹក</div>
-                        <div class="event-name" data-i18n="p2_d1_e1">ពិធីបំពាក់គ្រឿងអលង្ការ</div>
+                        <div class="time-badge" data-i18n="p2_d1_t1">ម៉ោង ០៦:០០ នាទីល្ងាច</div>
+                        <div class="event-name" data-i18n="p2_d1_e1">អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលល្ងាច</div>
                     </div>
                 </div>
 
                 <!-- DAY 2 -->
-                
+                 <div class="program-day-title" data-i18n="p2_day1_title">កម្មវិធីថ្ងៃទី២ ៖ ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦</div>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៨:៤៥ ព្រឹក</div>
-                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីសូត្រមន្តចំរើនព្រះបរិត្ត</div>
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៦:៣០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ជួបជុំភ្ញៀវកិត្តិយសរៀបចំហែជំនូន</div>
                     </div>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៩:១៥ ព្រឹក</div>
-                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីកាត់សក់បង្កក់សិរី</div>
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៧:០០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីហែកំណត់ (ជំនូន) ចូលរោងជ័យ</div>
                     </div>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ១០:៣០ ព្រឹក</div>
-                        <div class="event-name" data-i18n="p2_d2_e8">អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារថ្ងៃត្រង់</div>
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៧:៣០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីនិយាយជើងការ រៀបរាប់ផ្លែឈើ</div>
                     </div>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៥:៣០ ល្ងាច</div>
-                        <div class="event-name" data-i18n="p2_d2_e8">ទទួលបដិសណ្ឋារកិច្ចភ្ញៀវកិត្តិយសពិសាអាហារ ពេលល្ងាច នៅ ផ្លូវវេទិកាមេគង្គ (ផ្លូវមាត់ទន្លេច្រោយចង្វារ) រាជធានីភ្នំពេញ</div>
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៨:០០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីប៉ោយកុងម៉ា និងបំពាក់ចិញ្ចៀន</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៩:០០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីកាត់សក់បង្កក់សិរី ចម្រើនកេសា</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ១១:០០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីសំពះផ្ទឹម សែនចងដៃ ព្រះថោងតោងស្បៃ។</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ១២:០០ ថ្ងៃត្រង់</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារថ្ងៃត្រង់។</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៥:០០ ល្ងាច</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ទទួលបដិសណ្ឋារកិច្ចភ្ញៀវកិត្តិយសពិសាអាហារពេលល្ងាច សូមអរគុណ។</div>
                     </div>
                 </div>
 
@@ -1645,17 +1675,17 @@
         <!-- PAGE 3 (Bride & Groom) -->
         <div class="page" id="page3">
             <div class="photo-frame">
-                <img id="mainCoupleImg" src="/backgrund/5.jpg" alt="Couple Main Photo">
+                <img id="mainCoupleImg" src="/backgrund/1.jpg" alt="Couple Main Photo">
             </div>
             <div class="couple-bio-block">
                 <div class="bio-side">
-                    <img src="/backgrund/6.jpg" alt="Groom">
-                    <h3 data-i18n="groom_name">ហ៊ុន គឹមឈាន់</h3>
+                    <img src="backgrund/IMG_1020.jpg" alt="Groom">
+                    <h3 data-i18n="groom_name">ជា អានន្ទ</h3>
                     <p data-i18n="groom_label">កូនកំលោះ</p>
                 </div>
                 <div class="bio-side">
-                    <img src="backgrund/IMG_1020.jpg" alt="Bride">
-                    <h3 data-i18n="bride_name">ធី ប៉ាត់ទីម៉ា</h3>
+                    <img src="backgrund/IMG_1086.jpg" alt="Bride">
+                    <h3 data-i18n="bride_name">សៀង សាយលីញ</h3>
                     <p data-i18n="bride_label">កូនក្រមុំ</p>
                 </div>
             </div>
@@ -1665,55 +1695,41 @@
             </div>
         </div>
 
-        <!-- PAGE 4 (Elegant Memory Gallery - supports up to 15 photos) -->
+        <!-- PAGE 4 (Elegant Memory Gallery) -->
         <div class="page" id="page4">
             <div class="gallery-heading">
-                <h3>អាល់ប៊ុមរូបភាពអនុស្សាវរីយ៍</h3>
-                <p>រូបភាពអនុស្សាវរីយ៍របស់កូនកម្លោះ និងកូនក្រមុំ</p>
+                <h3> អាល់ប៊ុមរូបភាពអនុស្សាវរីយ៍</h3>
+                <p></p>
             </div>
 
             <div class="memory-hero">
                 <div class="slider-wrapper" id="slider" style="display:flex; transition:transform .45s ease;">
-                    <div class="slide"><img src="/backgrund/3.jpg" alt="រូបអនុស្សាវរីយ៍ទី 1" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/4.jpg" alt="រូបអនុស្សាវរីយ៍ទី 2" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/5.jpg" alt="រូបអនុស្សាវរីយ៍ទី 3" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/6.jpg" alt="រូបអនុស្សាវរីយ៍ទី 4" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/7.jpg" alt="រូបអនុស្សាវរីយ៍ទី 5" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/8.jpg" alt="រូបអនុស្សាវរីយ៍ទី 6" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/9.jpg" alt="រូបអនុស្សាវរីយ៍ទី 7" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/IMG_0987.jpg" alt="រូបអនុស្សាវរីយ៍ទី 8" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/IMG_1005.jpg" alt="រូបអនុស្សាវរីយ៍ទី 9" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/IMG_1009.jpg" alt="រូបអនុស្សាវរីយ៍ទី 10" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/IMG_1020.jpg" alt="រូបអនុស្សាវរីយ៍ទី 11" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/IMG_1053.jpg" alt="រូបអនុស្សាវរីយ៍ទី 12" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="/backgrund/IMG_1086.jpg" alt="រូបអនុស្សាវរីយ៍ទី 13" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="backgrund/album-14.jpg" alt="រូបអនុស្សាវរីយ៍ទី 14" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-                    <div class="slide"><img src="backgrund/album-15.jpg" alt="រូបអនុស្សាវរីយ៍ទី 15" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+                   <!-- <div class="slide"><img src="backgrund/IMG_1024.jpg" alt="Photo 1"></div>-->
+                    <div class="slide"><img src="backgrund/IMG_1009.jpg" alt="Photo 2"></div>
+                    <div class="slide"><img src="backgrund/IMG_1005.jpg" alt="Photo 3"></div>
+                   <div class="slide"><img src="/backgrund/4.jpg" alt="Photo 4"></div>
+                    <div class="slide"><img src="/backgrund/3.jpg" alt="Photo 5"></div>
+                    <!--<div class="slide"><img src="backgrund/IMG_1072.jpg" alt="Photo 6"></div>-->
+                    <div class="slide"><img src="/backgrund/2.jpg" alt="Photo 7"></div>
                 </div>
 
                 <button class="gallery-arrow" style="left:10px;" onclick="moveSlide(-1)" aria-label="Previous photo">❮</button>
                 <button class="gallery-arrow" style="right:10px;" onclick="moveSlide(1)" aria-label="Next photo">❯</button>
-                <div class="gallery-counter" id="galleryCounter">1 / 15</div>
+                <div class="gallery-counter" id="galleryCounter">1 / 7</div>
                 <div class="slider-dots" id="sliderDots" style="display:flex;justify-content:center;gap:6px;position:absolute;bottom:9px;width:100%;z-index:3;"></div>
             </div>
 
             <div class="memory-thumbs" id="memoryThumbs">
-                <button class="memory-thumb active" onclick="goToSlide(0)"><img src="/backgrund/3.jpg" alt="Thumbnail 1" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(1)"><img src="/backgrund/4.jpg" alt="Thumbnail 2" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(2)"><img src="/backgrund/5.jpg" alt="Thumbnail 3" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(3)"><img src="/backgrund/6.jpg" alt="Thumbnail 4" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(4)"><img src="/backgrund/7.jpg" alt="Thumbnail 5" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(5)"><img src="/backgrund/8.jpg" alt="Thumbnail 6" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(6)"><img src="/backgrund/9.jpg" alt="Thumbnail 7" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(7)"><img src="/backgrund/IMG_0987.jpg" alt="Thumbnail 8" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(8)"><img src="/backgrund/IMG_1005.jpg" alt="Thumbnail 9" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(9)"><img src="/backgrund/IMG_1009.jpg" alt="Thumbnail 10" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(10)"><img src="/backgrund/IMG_1020.jpg" alt="Thumbnail 11" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(11)"><img src="/backgrund/IMG_1053.jpg" alt="Thumbnail 12" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(12)"><img src="/backgrund/IMG_1086.jpg" alt="Thumbnail 13" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(13)"><img src="backgrund/album-14.jpg" alt="Thumbnail 14" onerror="this.parentElement.style.display='none'"></button>
-                <button class="memory-thumb" onclick="goToSlide(14)"><img src="backgrund/album-15.jpg" alt="Thumbnail 15" onerror="this.parentElement.style.display='none'"></button>
+                <button class="memory-thumb active" onclick="goToSlide(0)"><img src="backgrund/IMG_1024.jpg" alt="Thumbnail 1"></button>
+                <button class="memory-thumb" onclick="goToSlide(1)"><img src="backgrund/IMG_1009.jpg" alt="Thumbnail 2"></button>
+                <button class="memory-thumb" onclick="goToSlide(2)"><img src="backgrund/IMG_1005.jpg" alt="Thumbnail 3"></button>
+                <button class="memory-thumb" onclick="goToSlide(3)"><img src="/backgrund/4.jpg" alt="Thumbnail 4"></button>
+                <button class="memory-thumb" onclick="goToSlide(4)"><img src="backgrund/IMG_1020.jpg" alt="Thumbnail 5"></button>
+                <button class="memory-thumb" onclick="goToSlide(5)"><img src="backgrund/IMG_1072.jpg" alt="Thumbnail 6"></button>
+                <button class="memory-thumb" onclick="goToSlide(6)"><img src="/backgrund/2.jpg" alt="Thumbnail 7"></button>
             </div>
+
+            
 
             <div class="btn-group" style="margin-top:auto;">
                 <button class="btn btn-secondary" onclick="goToPage(3)" data-i18n="btn_back">⬅ ថយក្រោយ</button>
@@ -1721,90 +1737,341 @@
             </div>
         </div>
 
-        <!-- PAGE 5 (Location, Wedding Date, Digital Gift & Contact) -->
+        <!-- PAGE 5 (Wishes & RSVP / Countdown) -->
         <div class="page" id="page5">
-            <div class="page5-heading">
-                <div class="page5-eyebrow">LOCATION · MAP</div>
-                <h2 class="page5-main-title">ទីតាំងកម្មវិធី</h2>
-                <p>សូមមើលផែនទីខាងក្រោម ដើម្បីងាយស្រួលធ្វើដំណើរចូលរួមកម្មវិធីមង្គលការ</p>
+            <div class="section-box">
+                <div class="section-title">📅 កាលបរិច្ឆេទកម្មវិធីសិរីមង្គល</div>
+                <div style="padding: 0.8rem 0; text-align: center;">
+                    <div style="font-family: 'Moul', cursive; font-size: 0.9rem; color: var(--primary-gold); margin-bottom: 0.4rem;">
+                        នៅ ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦
+                    </div>
+                    <div style="font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--text-gold); font-weight: bold;">
+                       ត្រូវនឹងថ្ងៃ ៦រោច ខែកត្តិ ក ឆ្នាំថោះ អដ្ឋស័ក ព.ស. ២៥៧០ វេលាម៉ោង ៥:០០ ល្ងាច ស្ថិតនៅ មជ្ឈមណ្ឌលសុភមង្គល (អគារA+B) ក្រុងបាត់ដំបង ខេត្តបាត់ដំបង
+                </div>
             </div>
+            
+            <div >
+    
+   
+</div>
 
-            <section class="location-card" aria-label="ទីតាំងកម្មវិធីមង្គលការ">
-    <div class="page5-map-frame">
-        <iframe
-            title="ផែនទី La Vida Floating ភ្នំពេញ"
-            src="https://maps.google.com/maps?q=La+Vida+Floating+Phnom+Penh&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen>
-        </iframe>
+<style>
+/* CSS Styling */
+.digital-gift-box {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.95), rgba(40, 40, 40, 0.95));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.digital-gift-box .section-title {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-gold, #d4af37);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.digital-gift-box .qr-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.digital-gift-box .qr-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    width: 170px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.digital-gift-box .qr-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.digital-gift-box .qr-image-wrapper {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 12px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.digital-gift-box .qr-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Download Button Overlay Style */
+.digital-gift-box .download-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(212, 175, 55, 0.95);
+    color: #111;
+    border: none;
+    padding: 6px 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.digital-gift-box .qr-image-wrapper:hover .download-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.digital-gift-box .download-btn:hover {
+    background: #e6c547;
+}
+
+/* Info Styling */
+.digital-gift-box .bank-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #111;
+    background: var(--text-gold, #d4af37);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.digital-gift-box .account-name {
+    font-size: 0.8rem;
+    color: var(--text-gold, #d4af37);
+    font-weight: 600;
+    margin: 0 0 3px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.digital-gift-box .account-number {
+    font-size: 0.75rem;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+</style>
+
+<script>
+/* JavaScript សម្រាប់ទាញយករូបភាពសន្លឹកពេញ (Full Image) ពេលចុចប៊ូតូន */
+function downloadSpecificQR(fullImgId, filename) {
+    const fullImgElement = document.getElementById(fullImgId);
+    
+    const originalImage = new Image();
+    originalImage.crossOrigin = "anonymous";
+    originalImage.src = fullImgElement.src; // យក Source ពីរូបភាពសន្លឹកពេញដែលលាក់ទុក
+    
+    originalImage.onload = function() {
+        const canvas = document.createElement('canvas');
+        canvas.width = originalImage.naturalWidth;
+        canvas.height = originalImage.naturalHeight;
+        
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(originalImage, 0, 0);
+        
+        const imageURL = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.href = imageURL;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+}
+</script>
+            
+            <!--MAP-->
+           <!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<title>Event Location</title>
+<style>
+  /* រចនាប័ទ្មទូទៅសម្រាប់ប្រអប់ ដោយប្តូរផ្ទៃខាងក្រោយទៅជាពណ៌ស និងអត្ថបទពណ៌ដិត */
+  .event-section-box {
+    background: #ffffff;
+    padding: 40px 25px;
+    border-radius: 28px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 30px auto;
+    font-family: 'Khmer OS Battambang', 'Cambria', sans-serif;
+    max-width: 700px;
+    box-sizing: border-box;
+  }
+
+  /* ចំណងជើងពណ៌មាស */
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(to right, #d4af37, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+  }
+
+  .map-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  /* រូបភាពផែនទីផ្ទៃស និងពណ៌មាសស្មើគ្នា ដោយគ្មានស៊ុម wrapper */
+  .map-content-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .map-content-container img:hover {
+    transform: scale(1.02);
+  }
+
+  /* ប្រអប់លេខទូរស័ព្ទរចនាបែបកាតមាសទន់ៗនៅលើផ្ទៃស */
+  .contact-info-box {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    padding: 18px 30px;
+    border-radius: 16px;
+    color: #8b6508;
+    font-size: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+  }
+
+  .contact-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: #705206;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .phone-numbers-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .phone-numbers-row a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .phone-numbers-row a:hover {
+    color: #d4af37;
+  }
+
+  .separator {
+    color: #d4af37;
+  }
+
+  /* ប៊ូតុងមាសទំនើប */
+  .map-action-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa771c 100%);
+    color: #1a1a1a;
+    padding: 15px 35px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 8px 25px rgba(212,175,55,0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .map-action-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(212,175,55,0.5);
+  }
+</style>
+</head>
+<body>
+<!-- 
+<div class="event-section-box">
+     ចំណងជើង 
+    <div class="section-title">
+        ✦ ស្វាគមន៍មកកាន់ទីតាំងកម្មវិធី ✦
     </div>
-    <div class="venue-row">
-        <div class="venue-pin" aria-hidden="true">📍</div>
-        <div class="venue-copy">
-            <span>ទីតាំងកម្មវិធី</span>
-            <strong>La Vida Floating</strong>
-            <small>វិថី ទន្លេមេគង្គ · ភ្នំពេញ</small>
+    
+    <div class="map-content-container">
+        <!-- រូបភាពផែនទីផ្ទៃស
+        <img src="backgrund/map.png" alt="Event Map Location">
+        
+        <!-- ប្រអប់លេខទូរស័ព្ទ 
+        <div class="contact-info-box">
+            <span class="contact-label">📞 លេខទូរស័ព្ទទំនាក់ទំនងម្ចាស់កម្មវិធី</span>
+            <div class="phone-numbers-row">
+                <a href="tel:017393667">017 393 667</a>
+                <span class="separator">|</span>
+                <a href="tel:012223967">012 223 967</a>
+            </div>
         </div>
+
+        <!-- ប៊ូតុង Google Maps 
+        <a href="https://maps.app.goo.gl/YOUR_LINK_HERE" target="_blank" class="map-action-button">
+            <span>📍 បើកមើលក្នុង Google Maps</span>
+        </a>
     </div>
-    <a class="page5-map-button" href="https://maps.app.goo.gl/8hAWmHVpt1sXTFc67" target="_blank" rel="noopener noreferrer">
-        <span class="page5-map-button-icon">▣</span>
-        <span class="page5-map-button-copy"><strong>បើក Google Maps</strong><small>ចុចទីនេះដើម្បីមើលផ្លូវទៅកាន់ទីតាំង</small></span>
-        <span class="page5-map-button-arrow">›</span>
-    </a>
-</section>
-
-            <section class="page5-date-card" aria-label="កាលបរិច្ឆេទកម្មវិធី">
-                <div class="page5-card-heading">▦ កាលបរិច្ឆេទកម្មវិធីសិរីមង្គល</div>
-                <p class="page5-date-main">នៅ ថ្ងៃសៅរ៍ ៥កើត ខែកត្តិក ឆ្នាំមមី អដ្ឋស័ក ព.ស. ២៥៧០</p>
-                <p class="page5-date-details">ត្រូវនឹងថ្ងៃទី១៤ ខែវិច្ឆិកា ឆ្នាំ២០២៦  ស្ថិតនៅ ផ្លូវវេទិកាមេគង្គ​<br> (ផ្លូវមាត់ទន្លេច្រោយចង្វារ)
-រាជធានីភ្នំពេញ<br>ចាប់ផ្ដើមវេលាម៉ោង ៥:០០ ល្ងាច</p>
-            </section>
-
-            <section class="digital-gift-box page5-gift-card" aria-label="អំណោយមង្គលការ">
-                <div class="page5-gift-icon" aria-hidden="true">🎁</div>
-                <div class="page5-gift-eyebrow">DIGITAL WEDDING GIFT</div>
-                <h2 class="page5-gift-title">ពរជ័យសិរីមង្គល</h2>
-                <p class="page5-gift-subtitle">ABA Bank · សម្រាប់ផ្ញើជំនួយក្នុងឱកាសសិរីមង្គល</p>
-                <div class="page5-gift-divider"><span>✦</span></div>
-
-                <div class="page5-bank-panel">
-                    <div class="page5-bank-details">
-                        <div class="page5-bank-brand-row">
-                            <span class="page5-aba-logo">ABA</span>
-                            <span class="page5-bank-name"><strong>ABA BANK</strong><small>Digital Gift</small></span>
-                        </div>
-                        <div class="page5-account-label">ឈ្មោះគណនី</div>
-                        <strong class="page5-account-name">PHATHYMA THY</strong>
-                        <p>សូមស្កេន QR Code ដោយប្រើ ABA Mobile ដើម្បីផ្ញើជំនួយ</p>
-                    </div>
-                    <div class="page5-qr-column">
-                        <div class="page5-qr-placeholder" id="abaQrPlaceholder">
-                            <span class="page5-qr-symbol" aria-hidden="true">▦</span>
-                            <strong>ABA payment QR</strong>
-                            <small>ដាក់រូប QR របស់អ្នកជា<br><b>backgrund/aba-qr.png</b></small>
-                        </div>
-                        <img id="abaPaymentQR" class="page5-aba-qr" src="/backgrund/aba-1.jpg" alt="ABA Payment QR" loading="lazy"
-                             onload="this.style.display='block'; document.getElementById('abaQrPlaceholder').style.display='none'; document.getElementById('downloadAbaQr').style.display='flex';"
-                             onerror="this.style.display='none';">
-                        <a id="downloadAbaQr" class="page5-qr-download" href="/backgrund/aba.jpg" download="ABA-Payment-QR.png" style="display:none;">ទាញយក QR</a>
+</div>
+-->
+</body>
+</html>
+            <div class="section-box" style="text-align: left; padding: 10px 15px;">
+                <div class="section-title" style="text-align: center; margin-bottom: 8px;">🏢 ព័ត៌មានទំនាក់ទំនងក្រុមហ៊ុន</div>
+                <div style="font-size: 0.78rem; color: var(--text-light); line-height: 1.6;">
+                    <p style="margin-bottom: 4px;">📌 <strong>ឈ្មោះ៖</strong> លីម៉ី បោះពុម្ព និងឌីសាញ (LYMEY Printing)</p>
+                    <p style="margin-bottom: 4px;">📞 <strong>ទូរស័ព្ទ៖</strong> 092 888 808</p>
+                    <p style="margin-bottom: 4px;">📍 <strong>ទីតាំង៖</strong> រាជធានីភ្នំពេញ</p>
+                    <p style="margin-bottom: 6px;">🌐 <strong>ហ្វេសប៊ុក៖</strong> LYMEY Printing</p>
+                    <div style="text-align: center; margin-top: 8px;">
+                        <a href="https://t.me/lymeybrand" target="_blank" style="display: inline-block; background: var(--primary-gold); color: #000; padding: 6px 12px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 0.75rem;">
+                            👉 ចូលរួមក្នុងក្រុមដើម្បីមើលម៉ូតធៀបថ្មីៗ
+                        </a>
                     </div>
                 </div>
-                <p class="page5-qr-note">▯ សូមប្រើ ABA Mobile ស្កេន QR Code ដើម្បីផ្ញើជំនួយ</p>
-            </section>
-
-            <section class="section-box page5-contact-card" style="text-align:left;">
-                <div class="page5-contact-heading">▦ ព័ត៌មានទំនាក់ទំនង</div>
-                <div class="page5-contact-details">
-                    <p>📌 <strong>ឈ្មោះ៖</strong> លីម៉ី បោះពុម្ព និងឌីសាញ (LYMEY Printing)</p>
-                    <p>📞 <strong>ទូរស័ព្ទ៖</strong> <a href="tel:092888808">092 888 808</a></p>
-                    <p>📍 <strong>ទីតាំង៖</strong> រាជធានីភ្នំពេញ</p>
-                    <p>🌐 <strong>ហ្វេសប៊ុក៖</strong> LYMEY Printing</p>
-                </div>
-                <a class="page5-contact-button" href="https://t.me/lymeybrand" target="_blank" rel="noopener noreferrer">➜ ចូលរួមមើលម៉ូតធៀបថ្មីៗ</a>
-            </section>
-
-            <div class="btn-group page5-nav">
+            </div>
+            
+            <div class="btn-group">
                 <button class="btn btn-secondary" onclick="goToPage(4)" data-i18n="btn_back">⬅ ថយក្រោយ</button>
             </div>
         </div>
@@ -1813,14 +2080,56 @@
 
     <!-- JavaScript code functionality -->
     <script>
-        // បង្ហាញឈ្មោះភ្ញៀវពី URL: ?to=លោកគ្រូ%20ខេង%20និង%20ភរិយា
-        // URLSearchParams.get() បាន decode %20 ជា space រួចហើយ ដូច្នេះមិនត្រូវ decodeURIComponent() ម្តងទៀតទេ។
-        (function setGuestNameFromURL() {
-            const guestParam = new URLSearchParams(window.location.search).get('to');
+        // បង្ហាញឈ្មោះភ្ញៀវពី ?to= (តំណចាស់) ឬអានពី Cloudflare Workers KV តាម ?i=ID
+        // GET /api/invitations/:id ត្រូវបានបម្រើដោយ functions/api/invitations/[id].js
+        (async function setGuestNameFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            const legacyName = (params.get('to') || '').trim();
+            const invitationId = (params.get('i') || '').trim();
             const guestEl = document.getElementById('guestName');
 
-            if (guestEl && guestParam && guestParam.trim()) {
-                guestEl.textContent = `ជូនចំពោះ ${guestParam.trim()}`;
+            function applyGuestName(value) {
+                const name = String(value || '').trim();
+                if (!name) return;
+
+                if (guestEl) guestEl.textContent = `ជូនចំពោះ ${name}`;
+                document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${name}`;
+
+                const ogTitle = document.querySelector('meta[property="og:title"]');
+                if (ogTitle) ogTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${name}`);
+                const ogDesc = document.querySelector('meta[property="og:description"]');
+                if (ogDesc) ogDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${name} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+                const twTitle = document.querySelector('meta[name="twitter:title"]');
+                if (twTitle) twTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${name}`);
+                const twDesc = document.querySelector('meta[name="twitter:description"]');
+                if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${name} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+            }
+
+            // Backward compatibility: direct-name links continue to work.
+            if (legacyName) {
+                applyGuestName(legacyName);
+                return;
+            }
+
+            if (!invitationId) return;
+
+            try {
+                const response = await fetch(`/api/invitations/${encodeURIComponent(invitationId)}`, {
+                    method: 'GET',
+                    headers: { 'Accept': 'application/json' },
+                    cache: 'no-store'
+                });
+                if (!response.ok) {
+                    throw new Error(`Invitation API returned HTTP ${response.status}`);
+                }
+                const data = await response.json();
+                if (!data || typeof data.name !== 'string' || !data.name.trim()) {
+                    throw new Error('Invitation API response has no guest name');
+                }
+                applyGuestName(data.name);
+            } catch (error) {
+                console.error('Workers KV: មិនអាចទាញឈ្មោះភ្ញៀវបានទេ។', error);
+                // Leave the default guest text in place rather than breaking the invitation design.
             }
         })();
 
@@ -2106,288 +2415,5 @@
         
     </script>
     
-
-<!-- OLIVE GREEN + GOLD THEME: styled to match the supplied reference image -->
-<style id="olive-green-gold-theme">
-:root {
-  --olive-deep: #343d25;
-  --olive-dark: #414a2a;
-  --olive-mid: #505630;
-  --olive-light: #62633a;
-  --gold-bright: #ffe9a0;
-  --gold-main: #d4af37;
-  --gold-soft: #f1d575;
-  --gold-dark: #98741b;
-  --primary-gold: #d4af37;
-  --dark-gold: #8f6d17;
-  --border-color: rgba(212, 175, 55, .58);
-  --text-light: #f3d775;
-  --text-gold: #f7df89;
-  --glow-gold: rgba(212, 175, 55, .24);
-  --text-formal: #f0d16a;
-  --silver-1: #fff1b4;
-  --silver-2: #f4d878;
-  --silver-3: #d4af37;
-  --silver-4: #b8860b;
-  --silver-5: #8a6508;
-  --silver-6: #e2bf4f;
-  --silver-7: #6f5006;
-}
-
-html { background: var(--olive-deep); }
-body {
-  background-color: var(--olive-deep) !important;
-  color: var(--text-light) !important;
-}
-body::before {
-    z-index: -1 !important;
-    background: rgba(38, 45, 24, 0.45) !important;
-    pointer-events: none;
-}
-/* Main invitation panel: soft olive surface with a fine gold rim. */
-.invitation-card {
-  background:
-   linear-gradient(180deg, rgba(98, 100, 57, .76), rgba(62, 72, 42, .82)) padding-box,
-    linear-gradient(135deg, #fff0ad 0%, #d4af37 18%, #8f6d17 34%, #f8df83 50%, #b8860b 68%, #f5dc7b 84%, #d4af37 100%) border-box !important;
-  border: 3px solid transparent !important;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,.65), 0 0 24px rgba(212,175,55,.22), inset 0 0 18px rgba(255,240,173,.05) !important;
-}
-.invitation-card::before {
-  border-color: #e4c65f !important;
-  box-shadow: 0 0 8px rgba(255,224,126,.22) !important;
-}
-/* Keep the decorative frame overlay, while the panel underneath is olive. */
-.invitation-card::after { pointer-events: none; }
-
-#page1 {
-  background-image: linear-gradient(rgba(55, 62, 34, .70), rgba(55, 62, 34, .78)), url('/backgrund/IMG_0987.jpg') !important;
-  background-size: cover !important;
-  background-position: center !important;
-}
-.page { background-color: rgba(63, 73, 42, .20) !important; }
-.page::-webkit-scrollbar-thumb { background: #d4af37 !important; }
-
-/* Matching warm metallic gold for titles, body copy, names and timeline. */
-.invitation-card,
-.invitation-card p,
-.invitation-card span,
-.invitation-card h1,
-.invitation-card h2,
-.invitation-card h3,
-.invitation-card h4,
-.invitation-card h5,
-.invitation-card h6,
-.invitation-card a,
-.invitation-card .event-name,
-.invitation-card .gallery-heading p,
-.invitation-card .gallery-tip,
-.content-container-formal,
-.invitation-text,
-.date-location-block-formal,
-.event-name,
-.bio-side p,
-.digital-gift-box .account-name {
-  color: #f0d477;
-}
-.header-title,
-.formal-title,
-.guest-label,
-.couple-names-front span,
-.main-couple-name-formal,
-.agenda-divider,
-.program-day-title,
-.time-badge,
-.section-title,
-.highlight-date-formal,
-.sub-title,
-.wedding-date-front {
-  background: linear-gradient(180deg, #fff2b4 0%, #f3d778 20%, #b8860b 38%, #ffe9a0 52%, #9b7418 70%, #f2d878 86%, #70520b 100%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: transparent !important;
-  text-shadow: 0 1px 8px rgba(212,175,55,.20) !important;
-}
-.parent-name,
-.parents-name,
-.father-name,
-.mother-name,
-.parent-info,
-.parents-info,
-.family-name,
-.guest-name,
-.couple-name-label {
-  background: linear-gradient(90deg, #8a6508 0%, #d4af37 24%, #fff0ae 43%, #f6d975 58%, #b8860b 78%, #fff0ae 100%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: transparent !important;
-  text-shadow: 0 0 7px rgba(212,175,55,.16) !important;
-}
-
-/* Borders and ornaments use gold rather than silver/chrome. */
-.photo-frame,
-.bio-side img,
-.program-day-title,
-.guest-name-box,
-.bio-side,
-.section-box,
-.gallery-heading,
-.memory-hero .slide,
-.digital-gift-box,
-.digital-gift-box .qr-item,
-.event-section-box {
-  border-color: rgba(212,175,55,.68) !important;
-}
-.agenda-divider::before,
-.agenda-divider::after {
-  background: linear-gradient(90deg, transparent, #b8860b, #fff0ad, #d4af37, #fff0ad, #b8860b, transparent) !important;
-}
-.program-day-title {
-  background-color: rgba(212,175,55,.10) !important;
-  border-left-color: #d4af37 !important;
-}
-.timeline { border-left-color: rgba(241,213,117,.40) !important; }
-.timeline-item::before { background: #e0bd45 !important; box-shadow: 0 0 8px rgba(212,175,55,.85) !important; }
-
-/* Gold logo, music control, wax seal and buttons. */
-.page1-logo {
-  background: linear-gradient(180deg, #fff7c9 0%, #f5d96f 12%, #b8860b 28%, #ffeaa1 44%, #d4af37 60%, #8a6508 76%, #f3d66b 90%, #fff7c9 100%) !important;
-  filter: drop-shadow(0 0 3px rgba(255,235,150,.82)) drop-shadow(0 0 9px rgba(212,175,55,.48)) !important;
-}
-.page1-logo::after { background: linear-gradient(115deg, transparent 20%, rgba(255,248,200,0) 34%, rgba(255,248,200,.9) 45%, rgba(255,255,255,0) 56%, transparent 76%) !important; }
-.wax-seal-btn {
-  background: radial-gradient(circle, #fff2b7 0%, #e3c85d 30%, #b8860b 58%, #765b16 80%, #f2d878 100%) !important;
-  border-color: #fff0ad !important;
-  box-shadow: 0 0 24px rgba(212,175,55,.40), inset 0 2px 5px rgba(255,255,255,.35) !important;
-}
-.wax-seal-btn span { color: #4a4424 !important; }
-.icon-btn {
-  background: rgba(40,46,25,.68) !important;
-  border-color: #d4af37 !important;
-  color: #f6df8a !important;
-}
-.btn {
-  background: linear-gradient(135deg, #f4d878, #b8860b 58%, #8f6d17) !important;
-  color: #2f351e !important;
-  border: 1px solid #e4c65f !important;
-  box-shadow: 0 0 12px rgba(212,175,55,.17) !important;
-}
-.btn-secondary {
-  background: rgba(44,52,30,.60) !important;
-  border-color: #d4af37 !important;
-  color: #f4d878 !important;
-}
-.guest-name-inner {
-  background: rgba(52,61,37,.90) !important;
-  border: 1px solid rgba(212,175,55,.58) !important;
-  color: #fff0ad !important;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,.16) !important;
-}
-.guest-name-box {
-  background: linear-gradient(135deg, #fff0ad, #b8860b, #f4d878) !important;
-  box-shadow: 0 0 15px rgba(212,175,55,.22) !important;
-}
-
-/* Other sections follow the same olive-and-gold palette. */
-.bio-side,
-.section-box,
-.gallery-heading {
-  background: linear-gradient(135deg, rgba(103,105,61,.44), rgba(48,58,34,.68)) !important;
-}
-.memory-hero .slide { background: #3c462b !important; }
-.memory-thumb { background: #3c462b !important; border-color: rgba(212,175,55,.28) !important; }
-.memory-thumb.active { border-color: #f0d477 !important; box-shadow: 0 0 0 1px #8a6508, 0 0 14px rgba(212,175,55,.22) !important; }
-.gallery-counter,
-.gallery-arrow { background: rgba(46,53,31,.80) !important; border-color: rgba(212,175,55,.65) !important; color: #ffe9a0 !important; }
-.digital-gift-box { background: linear-gradient(135deg, rgba(53,62,37,.98), rgba(69,76,43,.98)) !important; }
-.digital-gift-box .qr-item { background: rgba(90,94,53,.55) !important; }
-.digital-gift-box .bank-badge,
-.digital-gift-box .download-btn { background: #d4af37 !important; color: #2d341e !important; }
-.digital-gift-box .account-number { color: #fff0ad !important; }
-.event-section-box { background: #48512f !important; color: #f0d477 !important; }
-.contact-info-box { background: rgba(212,175,55,.09) !important; color: #f1d575 !important; border-color: rgba(212,175,55,.5) !important; }
-.contact-label { color: #ffe9a0 !important; }
-.phone-numbers-row a { color: #fff0ad !important; }
-.map-action-button { background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa771c 100%) !important; color: #2d341e !important; }
-
-/* Keep any falling decorative petals within the gold palette. */
-.petal { background: linear-gradient(135deg, #fff0ad, #d4af37) !important; }
-
-
-/* PAGE 5 — map, date, digital gift and contact layout matching the reference */
-#page5 {
-  gap: 12px !important;
-  padding: 9px 9px 14px !important;
-  scroll-behavior: smooth;
-}
-.page5-heading { text-align: center; padding: 5px 5px 2px; flex: 0 0 auto; }
-.page5-eyebrow { color: #f4dc87; font: 700 .62rem/1.4 'Playfair Display', serif; letter-spacing: 2px; }
-.page5-main-title { margin: 2px 0 8px; color: #ffe9a0; font: 1.1rem/1.7 'Moul', cursive; text-shadow: 0 2px 8px rgba(212,175,55,.24); }
-.page5-heading p { color: #f0dfa1; font-size: .68rem; line-height: 1.7; margin: 0 auto; max-width: 330px; }
-.location-card { flex: 0 0 auto; padding: 9px; border: 1px solid rgba(212,175,55,.65); border-radius: 19px; background: linear-gradient(145deg,rgba(77,86,49,.96),rgba(51,61,36,.96)); box-shadow: 0 9px 22px rgba(0,0,0,.18); }
-.page5-map-frame { width: 100%; height: 204px; overflow: hidden; border-radius: 13px; border: 1px solid rgba(255,239,174,.5); background: #dce5e8; }
-.page5-map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
-.venue-row { display: flex; align-items: center; gap: 10px; padding: 12px 5px 10px; }
-.venue-pin { flex: 0 0 40px; width: 40px; height: 40px; display:flex; align-items:center; justify-content:center; font-size: 1.05rem; border-radius: 50%; background: linear-gradient(135deg,#fff0ad,#d4af37,#a77b14); box-shadow: 0 4px 14px rgba(212,175,55,.18); }
-.venue-copy { min-width: 0; display:flex; flex-direction:column; text-align:left; gap: 2px; }
-.venue-copy span { color:#dec36c; font-size:.64rem; }
-.venue-copy strong { color:#fff0ad; font-size:.87rem; line-height:1.45; }
-.venue-copy small { color:#ded7ac; font-size:.66rem; line-height:1.5; }
-.page5-map-button { display:flex; align-items:center; gap:10px; min-height:56px; width:100%; padding:7px 10px; border-radius:14px; text-decoration:none; color:#34351f !important; background:linear-gradient(120deg,#f5dfa0,#d4af37 70%,#b3861d); border:1px solid rgba(255,240,175,.8); box-shadow:0 4px 10px rgba(0,0,0,.10); }
-.page5-map-button-icon { width:36px; height:36px; flex:0 0 36px; border-radius:10px; display:flex; align-items:center; justify-content:center; background:rgba(255,249,213,.8); color:#96741c; font-size:1rem; }
-.page5-map-button-copy { flex:1; display:flex; flex-direction:column; text-align:left; line-height:1.45; }
-.page5-map-button-copy strong { color:#3b3519; font-size:.75rem; }
-.page5-map-button-copy small { color:#5a4b20; font-size:.59rem; }
-.page5-map-button-arrow { flex:0 0 27px; width:27px; height:27px; border:1px solid rgba(64,54,20,.4); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.1rem; }
-.page5-date-card { flex:0 0 auto; padding:15px 11px 17px; text-align:center; border:1px solid rgba(212,175,55,.52); border-radius:17px; background:linear-gradient(135deg,rgba(101,105,61,.50),rgba(59,69,40,.70)); }
-.page5-card-heading,.page5-contact-heading { color:#e5c652; font-family:'Moul',cursive; font-size:.76rem; text-align:center; line-height:1.8; margin-bottom:10px; }
-.page5-date-main { color:#ffe79a !important; font-family:'Moul',cursive; font-size:.79rem; font-weight:normal; line-height:1.9; margin:0 0 5px; }
-.page5-date-details { color:#f1df99 !important; font-size:.7rem; line-height:1.9; margin:0; }
-.page5-gift-card { flex:0 0 auto; padding:17px 12px !important; background:radial-gradient(circle at 100% 0%,rgba(115,93,33,.22),transparent 25%),linear-gradient(145deg,#171713,#211f14 65%,#14140f) !important; border:1px solid rgba(212,175,55,.58) !important; border-radius:22px !important; color:#f5dfa0; }
-.page5-gift-icon { margin:0 auto 6px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(243,216,120,.7); border-radius:14px; background:linear-gradient(135deg,rgba(212,175,55,.18),rgba(50,57,34,.5)); font-size:1.1rem; }
-.page5-gift-eyebrow { color:#e9ce76; font:700 .6rem/1.5 'Playfair Display',serif; text-align:center; letter-spacing:2px; }
-.page5-gift-title { color:#fff0ad; text-align:center; font:1rem/1.8 'Moul',cursive; margin:0; }
-.page5-gift-subtitle { color:#d7ceb1 !important; text-align:center; font-size:.65rem; margin:0; line-height:1.7; }
-.page5-gift-divider { display:flex; align-items:center; justify-content:center; gap:8px; color:#d4af37; margin:10px auto 12px; width:42%; font-size:.8rem; }
-.page5-gift-divider::before,.page5-gift-divider::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,#d4af37,#fff0ad); }
-.page5-gift-divider::after { transform:scaleX(-1); }
-.page5-bank-panel { display:grid; grid-template-columns:minmax(0,1fr) 126px; gap:10px; align-items:center; padding:12px; border:1px solid rgba(112,169,239,.68); border-radius:18px; background:linear-gradient(120deg,#123b7d,#0c2552 75%,#0b1a38); box-shadow:inset 0 1px rgba(255,255,255,.1); }
-.page5-bank-details { min-width:0; text-align:left; color:#fff; }
-.page5-bank-brand-row { display:flex; align-items:center; gap:8px; margin-bottom:15px; }
-.page5-aba-logo { padding:5px 7px; border-radius:7px; background:#fff; color:#174078; font:italic 900 1rem/1 'Arial',sans-serif; letter-spacing:-1px; }
-.page5-bank-name { display:flex; flex-direction:column; gap:1px; }
-.page5-bank-name strong { color:#fff !important; font:800 .7rem/1.2 Arial,sans-serif; letter-spacing:1px; }
-.page5-bank-name small { color:#dae7ff; font-size:.55rem; }
-.page5-account-label { color:#bcd2f7; font-size:.62rem; margin-bottom:3px; }
-.page5-account-name { color:#fff !important; display:block; font-size:.7rem; line-height:1.5; overflow-wrap:anywhere; }
-.page5-bank-details p { color:#d3e0fa !important; font-size:.58rem; line-height:1.6; margin:8px 0 0; }
-.page5-qr-column { min-width:0; }
-.page5-qr-placeholder,.page5-aba-qr { width:126px; height:126px; border-radius:12px; }
-.page5-qr-placeholder { background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; padding:8px; color:#d5ad39; text-align:center; overflow:hidden; }
-.page5-qr-symbol { color:#16427f; font-size:1.5rem; line-height:1; }
-.page5-qr-placeholder strong { font-size:.66rem; line-height:1.4; }
-.page5-qr-placeholder small { color:#877535; font-size:.5rem; line-height:1.45; overflow-wrap:anywhere; }
-.page5-qr-placeholder small b { font-size:.48rem; }
-.page5-aba-qr { display:none; object-fit:contain; background:#fff; border:1px solid #fff; }
-.page5-qr-download { display:flex; align-items:center; justify-content:center; background:linear-gradient(120deg,#fff0ad,#d4af37); color:#393318 !important; text-decoration:none; border-radius:9px; font-weight:700; font-size:.66rem; min-height:30px; margin-top:7px; }
-.page5-qr-note { text-align:center; color:#e0d5ad !important; font-size:.61rem; line-height:1.7; margin:10px 0 0; }
-.page5-contact-card { flex:0 0 auto; border-radius:17px !important; padding:13px 14px 14px !important; background:linear-gradient(135deg,rgba(97,103,58,.46),rgba(48,59,34,.70)) !important; }
-.page5-contact-heading { margin-bottom:8px; }
-.page5-contact-details { color:#efd77d; font-size:.68rem; line-height:1.75; }
-.page5-contact-details p { margin:0 0 4px; color:#efd77d !important; overflow-wrap:anywhere; }
-.page5-contact-details a { color:#fff0ad !important; text-decoration:none; }
-.page5-contact-button { display:block; width:max-content; max-width:100%; margin:10px auto 0; padding:7px 13px; border-radius:7px; background:linear-gradient(120deg,#f4d878,#c49a25); color:#37331e !important; text-decoration:none; text-align:center; font-size:.65rem; font-weight:700; }
-.page5-nav { margin-top:0 !important; padding-top:0 !important; flex-shrink:0; }
-@media (max-width:360px) {
-  .page5-map-frame { height:180px; }
-  .page5-bank-panel { grid-template-columns:minmax(0,1fr) 108px; padding:9px; gap:8px; }
-  .page5-qr-placeholder,.page5-aba-qr { width:108px; height:108px; }
-  .page5-bank-name strong { font-size:.62rem; }
-  .page5-account-name { font-size:.64rem; }
-}
-
-</style>
-
 </body>
 </html>
