@@ -22,9 +22,30 @@
 
     <!-- កូដ JavaScript សម្រាប់ទាញយកឈ្មោះភ្ញៀវមកដូរ Meta ស្វ័យប្រវត្តិ -->
     <script>
+    (async function() {
         const urlParams = new URLSearchParams(window.location.search);
-        const guestName = urlParams.get('to');
+        const id = urlParams.get('i');
+        const legacyName = urlParams.get('to');
+        const guestEl = document.getElementById('guestName');
 
+        let guestName = "";
+
+        // ទាញយកឈ្មោះតាម ID ពី Worker KV API
+        if (id) {
+            try {
+                const response = supportFetch = await fetch(`/api/invitations/${encodeURIComponent(id)}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    guestName = data.name ? data.name.trim() : "";
+                }
+            } catch (e) {
+                console.log("Error fetching guest name:", e);
+            }
+        } else if (legacyName) {
+            guestName = legacyName.trim();
+        }
+
+        // កែប្រែ Meta Tags និងបង្ហាញឈ្មោះនៅលើកាត
         if (guestName) {
             document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${guestName}`;
             
@@ -39,8 +60,13 @@
 
             let twDesc = document.querySelector('meta[name="twitter:description"]');
             if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+
+            if (guestEl) {
+                guestEl.textContent = `ជូនចំពោះ ${guestName}`;
+            }
         }
-    </script>
+    })();
+</script>
     
     <title>Digital Invitation - លិខិតអញ្ជើញ</title>
     <!-- Google Fonts -->
