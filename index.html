@@ -21,26 +21,138 @@
     <meta name="twitter:image" content="https://pisethandmonypenita.netlify.app/PisethandMonypenita.jpg">
 
     <!-- កូដ JavaScript សម្រាប់ទាញយកឈ្មោះភ្ញៀវមកដូរ Meta ស្វ័យប្រវត្តិ -->
-    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+    let actualLinkToCopy = "";
+    let encodedQrLink = "";
+    let currentGuestName = "";
+    let qrCodeObj = null;
+    const SITE_URL = "https://hunkimchhornthyphathy2026.pages.dev";
+
+    // ពេលបើកចូលលីងដែលមាន ?to= វានឹងបង្ហាញឈ្មោះភ្ញៀវស្វ័យប្រវត្តិ និងដូរ Meta ស្វ័យប្រវត្តិ
+    window.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
         const guestName = urlParams.get('to');
+        const guestEl = document.getElementById('guestName');
 
-        if (guestName) {
-            document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${guestName}`;
-            
-            let ogTitle = document.querySelector('meta[property="og:title"]');
-            if (ogTitle) ogTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName}`);
+        if (guestName && guestName.trim()) {
+            const trimmedName = guestName.trim();
+            document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${trimmedName}`;  let ogTitle = document.querySelector('meta[property="og:title"]'); if (ogTitle) ogTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName}`);
 
             let ogDesc = document.querySelector('meta[property="og:description"]');
-            if (ogDesc) ogDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
-
-            let twTitle = document.querySelector('meta[name="twitter:title"]');
-            if (twTitle) twTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName}`);
+            if (ogDesc) ogDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);  let twTitle = document.querySelector('meta[name="twitter:title"]'); if (twTitle) twTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName}`);
 
             let twDesc = document.querySelector('meta[name="twitter:description"]');
-            if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+            if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);  if (guestEl) { guestEl.textContent = `ជូនចំពោះ ${trimmedName}`;
+            }
         }
-    </script>
+    });
+
+    // បង្កើតលីងអញ្ជើញជាមួយ ?to=
+    function generateLink() {
+        const guestInput = document.getElementById('guestNameInput') || document.getElementById('guestName');
+        const name = guestInput.value.trim();
+
+        if (!name) {
+            alert("សូមវាយបញ្ចូលឈ្មោះភ្ញៀវក្នុងប្រអប់ជាមុនសិន!");
+            guestInput.focus();
+            return;
+        }
+
+        currentGuestName = name;
+        actualLinkToCopy = `${SITE_URL}/?to=${encodeURIComponent(name)}`;
+        encodedQrLink = actualLinkToCopy;
+
+        document.getElementById('generatedLinkText').innerText = actualLinkToCopy;
+        document.getElementById('resultBox').style.display = 'block';
+
+        const qrcodeContainer = document.getElementById('qrcode');
+        qrcodeContainer.innerHTML = '';
+        try {
+            qrCodeObj = new QRCode(qrcodeContainer, {
+                text: encodedQrLink,
+                width: 170,
+                height: 170,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        } catch (error) {
+            qrcodeContainer.innerHTML = '<p style="color:red; font-size:12px;">មិនអាចបង្កើត QR បានទេ</p>';
+        }
+    }
+
+    async function downloadQRCode() {
+        const qrcodeDiv = document.getElementById('qrcode');
+        const qrCanvas = qrcodeDiv.querySelector('canvas');
+        const qrImg = qrcodeDiv.querySelector('img');
+        const qrSource = qrCanvas || qrImg;
+
+        if (!qrSource) {
+            alert('សូមចុចបង្កើតលីងអញ្ជើញជាមុនសិន!');
+            return;
+        }
+
+        const W = 760, H = 1320;
+        const canvas = document.createElement('canvas');
+        canvas.width = W;
+        canvas.height = H;
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = '#ead9bd';
+        ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = '#fffdf8';
+        ctx.fillRect(28, 28, W - 56, H - 56);
+        ctx.strokeStyle = '#c7a76f';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(44, 44, W - 88, H - 88);
+
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#9a7845';
+        ctx.font = '22px Georgia, serif';
+        ctx.fillText('W E D D I N G    I N V I T A T I O N', W / 2, 100);
+
+        const photo = document.getElementById('qrCardPhoto');
+        const px = 105, py = 132, pw = 550, ph = 400;
+        ctx.fillStyle = '#f1e6d4';
+        ctx.fillRect(px - 8, py - 8, pw + 16, ph + 16);
+        if (photo && photo.complete && photo.naturalWidth > 0) {
+            ctx.drawImage(photo, px, py, pw, ph);
+        }
+
+        ctx.fillStyle = '#5f4b32';
+        ctx.font = 'bold 32px sans-serif';
+        ctx.fillText('សូមស្កេន QR Code', W / 2, 600);
+        ctx.fillStyle = '#6e675c';
+        ctx.font = '22px sans-serif';
+        ctx.fillText('ដើម្បីបើកកាតអញ្ជើញមង្គលការ', W / 2, 642);
+        ctx.fillText('របស់ អានន្ទ & សៀង សាយជីញ', W / 2, 676);
+
+        const qrSize = 300, qx = (W - qrSize) / 2, qy = 710;
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(qx - 14, qy - 14, qrSize + 28, qrSize + 28);
+        ctx.strokeStyle = '#e8dfcf';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(qx - 14, qy - 14, qrSize + 28, qrSize + 28);
+        try { ctx.drawImage(qrSource, qx, qy, qrSize, qrSize); } catch (e) {}
+
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#6b5330';
+        ctx.font = 'bold 27px sans-serif';
+        ctx.fillText('អានន្ទ  &  សៀង សាយជីញ', W / 2, 1090);
+        ctx.fillStyle = '#918473';
+        ctx.font = '20px sans-serif';
+        ctx.fillText('សូមគោរពអញ្ជើញ និងរង់ចាំស្វាគមន៍ដោយក្តីរីករាយ', W / 2, 1140);
+
+        try {
+            const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+            if (!blob) throw new Error('png-export-failed');
+            const imageUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            const safeGuestName = currentGuestName ? currentGuestName.replace(/[^a-zA-Z0-9ក-អ]/g, '_') : 'guest';
+            link.href = imageUrl;
+            link.download = `Wedding_QR_Card_${safeGuestName}.png`; document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(imageUrl); } catch (error) { alert('មិនអាចទាញយកកាតជា PNG បានទេ។'); } }  function copyFullMessage() { if (!actualLinkToCopy \vert{}\vert{} !currentGuestName) return; const fullText = `អាពាហ៍ពិពាហ៍ អានន្ទ & សៀង សាយជីញ 💍\nសូមគោរពអញ្ជើញ ${currentGuestName} ចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️\n\n🔗 សូមចុចទី
     
     <title>Digital Invitation - លិខិតអញ្ជើញ</title>
     <!-- Google Fonts -->
